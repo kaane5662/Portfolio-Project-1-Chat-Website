@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <style>
+            /* CSS */
+
+
+            
+            .columntest2 {
+                background-color: rgb(245,245,245);
+            }
+            .height-test {
+                min-height: 100%;
+            }
+            .layoutborders {
+                border-radius: 15px;
+            }
+            .center-text {
+                text-align: center;
+            }
+            img {
+                cursor: pointer;
+            }
+
+            .navbar-img {
+                height:30px;
+                width:30px;
+            }
+
+            .navbar-spacing {
+                margin-top: 100px;
+            }
+            .navbar-top {
+                padding-bottom: 50px;
+            }
+            .min-profile-height{
+                min-height: 75px;
+            }
+            .profile-img {
+                clip-path: circle();
+                width: 85px;
+                height: 85px;
+            }
+            .footer1 {
+                position: relative;
+                height:100px;
+                margin-top: 0px;
+            }
+            input {
+                width: 100%;
+                border-radius: 15px;
+                border-color: white;
+            }
+            .chatbubble {
+                margin-top: 75px;
+                border-radius: 25px;
+                padding: 25px;
+                min-height: 75px;
+                background-color: rgb(255,255,255);
+
+            }
+            .profileBio {
+                font-size: 15px;
+                color: gray;
+                /* letter-spacing: 0.5px; */
+            }
+
+            .added-profiles {
+
+                margin-left: 90px;
+
+
+            }
+
+            .usernames {
+                margin-top: -85px;
+                margin-left: 90px;
+            }
+            .chat-viewport {
+                overflow: hidden !important;
+                overflow-y: scroll !important;
+                min-height: 650px !important;
+                height: 650px;
+            }
+            .chat-images {
+                clip-path: circle();
+                width: 50px;
+                height: 50px;
+                margin-top: 20%;
+                
+            }
+            .pfp-user-global {
+                margin-left: -25%;
+               
+            }
+            .global-bubble {
+                margin-top: -15%;
+            }
+            .pfp-user-local {
+                margin-left: 110%;
+               
+            }
+            .local-bubble {
+                margin-top: -15%;
+                background-color: rgb(69,69,165); 
+                color: white;
+            }
+            .img-alignment {
+                width: 45px; 
+                text-align: center;
+            }
+            .profile-name {
+                margin-top: -35%;
+                margin-left: 45%;
+                
+            }
+            .profile-desc {
+                width: 55%;
+                margin-left: 45%;
+
+            }
+            .profile-spacing {
+                margin-top: 20%;
+            }
+            .onlineUsers {
+                overflow: hidden !important;
+                overflow-y: scroll !important;
+                min-height: 100% !important;
+                height: 700px;
+            }
+            .background-theme {
+                background-color: rgb(69,69,165) 
+            }
+            .text-theme {
+                color: rgb(69,69,165)
+            }
+            .text-box {
+                width: 90%;
+                height: 50%;
+                border: none;
+            }
+            hr {
+                border : purple;
+            }
+            .submit-button {
+                color: white;
+                border-radius: 100%;
+                height: 50%;
+                width: 4.5%;
+                margin-left: 2%;
+                border: none;
+                
+                
+            }
+            
+            button:hover {
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+            transition: 0.5s;
+            
+            }
+            button:active {
+                transition: 0.3s;
+                border: none;
+                opacity: 5;
+                
+                color: black;
+                background-color: white;
+                outline: 0;
+            }
+            input:hover {
+                border-style: solid;
+                border: 1px solid rgba(0,0,0, 0.2);
+                box-shadow: 0 0 2px 1px rgba(0,0,0, 0.2);
+                border-color: none;
+                
+                
+                
+
+            }
+            
+            input:focus {
+                
+                border: 1px solid rgba(0,0,0, 0.2);
+                outline: 0;
+                box-shadow: 0 0 2px 1px rgba(0,0,0, 0.2);
+            }
+
+            
+
+        </style>
+
+        <title>Chatty</title>
+    </head>
+    <body>
+        <!-- HTML -->
+        <div class="row testing font1 height-test ">
+           
+            <!--navbar-->
+            <div class="col-xl-1 layoutborders background-theme center-text">
+              
+              
+              <img src= "img/white-chat-logo.png" class = "navbar-img navbar-spacing chat-place" style = "margin-top: 160%"><br>
+              <img src= "img/white-setting-logo.png" class = "navbar-img navbar-spacing setting-icon"><br>
+              <img src= "img/logout-button.png" class = "navbar-img navbar-spacing logout-button"><br>
+
+
+
+            </div>
+
+            <!-- profiles -->
+          
+            <div class="col-xl-2 layoutborders onlineUsers">
+
+
+
+
+                  <div class= "profile-spacing" >
+                      <img src = "img/pfp-test.png" class = "profile-img" >
+
+
+                  
+               
+                    <h4 class = "profile-name">Lorry</h4>
+                    <p class = "profileBio profile-desc">Lorem ipsum dolor sit amet</p>
+                </div>
+
+              
+
+
+
+
+
+
+
+
+
+            </div>
+            <!-- chat viewport -->
+            <div class="col-xl-9 columntest2 layoutborders chat" id = 'viewport'>
+
+
+               <div class = "chat-viewport">
+                  <div class = "col-xl-4 chatbubbleglobal" style= "margin-left: 10%">
+                      <img src = "img/pfp-test.png" class = "chat-images pfp-user-global">
+                      <h6 class = "pfp-user-global img-alignment" >Kaan</h6>
+                      <p class = "chatbubble global-bubble">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                  </div>
+
+                  <div class = "col-xl-4 chatbubblelcl " style = " margin-left: 50%">
+                      <img src = "img/pfp-test.png" class = "chat-images pfp-user-local">
+                      <h6 class = "pfp-user-local img-alignment" >You</h6>
+                      <p class = "chatbubble local-bubble background-theme" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.t</p>
+
+                  </div>
+
+
+              </div>
+
+              <!--textbox-->
+              <!-- <hr></hr> -->
+
+              <div>
+                
+                  <footer class = "footer1 ">
+                    
+
+                    <input type="text" id="chat-text" class = "text-box" name="chat" placeholder="Write your message ...">
+                    <button class = "generate background-theme submit-button">➣</button>
+
+                </footer>
+            </div>
+
+            </div>
+
+
+       </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+        <script type = "module" src = "index.js"></script>
+        <script>
+            // JS
+
+            document.querySelector(".setting-icon").addEventListener("click", function(){
+
+
+                window.location.replace("settings.html")
+
+
+            })
+            document.querySelector(".chat-place").addEventListener("click", function(){
+
+
+                window.location.replace("index.html")
+
+
+            })
+
+            
+            
+            
+
+
+            var trackNumber2 = 0
+
+
+            //local chat
+
+            function bubbling(profilepic, name, paragraph){
+                var textbox = paragraph
+                // console.log(textbox)
+                var localBubble = document.createElement("p")
+                var username = document.createElement("h6")
+                var profile = document.createElement("img")
+                var div = document.createElement("div")
+                
+
+                
+                
+                username.innerHTML = name
+                username.classList.add("pfp-user-local")
+                username.classList.add("img-alignment")
+
+
+
+                profile.src = profilepic
+                profile.classList.add("chat-images")
+                profile.classList.add("pfp-user-local")
+
+                trackNumber2++
+
+                //create random class div
+                var test = "newDivBubbleLocal"+ trackNumber2.toString()
+                //select last random class div
+                var test2 = "."+test
+
+
+                div.classList.add("col-xl-4")
+                div.style.marginLeft = "50%"
+                div.classList.add("chatbubblelc1")
+                div.classList.add(test)
+
+                // console.log("Hello?")
+
+                
+                
+                localBubble.innerHTML = textbox
+                
+                localBubble.classList.add("chatbubble")
+                localBubble.classList.add("local-bubble")
+                localBubble.classList.add('background-theme')
+                localBubble.style.backgroundColor = 'rgb(230,160,40)'
+                
+                
+
+                // console.log(profile)
+                // console.log(username)
+                
+
+                // document.querySelector(".chat-viewport").append(profile, username, localBubble)
+
+                document.querySelector(".chat-viewport").appendChild(div)
+                document.querySelector(test2).appendChild(profile)
+                document.querySelector(test2).appendChild(username)
+                document.querySelector(test2).appendChild(localBubble)
+
+
+                scrollToEnd(".chat-viewport")
+
+            }
+
+
+            var user;
+            var username;
+            var userbio;
+
+             var trackNumber = 0
+
+             //user pfp
+
+            function online(profile, name, bio) {
+                var pfp = document.createElement("img")
+                var user = document.createElement("h4")
+                var userBio = document.createElement("p")
+                var divider = document.createElement("div")
+
+                
+
+
+                
+                trackNumber++
+
+                //create random class div
+                var test = "newDivProfile"+ trackNumber.toString()
+                //select last random class div
+                var test2 = "."+test
+                
+                // console.log(test)
+                divider.classList.add(test)
+
+                divider.classList.add("profile-spacing")
+                divider.classList.add("profile-spacing")
+
+                
+                
+
+                pfp.src = profile
+                // pfp.classList.add("chat-images")
+                pfp.classList.add("profile-img")
+                
+
+                user.innerHTML = name
+                user.classList.add("profile-name")
+
+
+
+                userBio.innerHTML = bio
+                userBio.classList.add("profileBio")
+                userBio.classList.add("profile-desc")
+                
+
+
+
+                document.querySelector(".onlineUsers").appendChild(divider)
+                document.querySelector(test2).appendChild(pfp)
+                document.querySelector(test2).appendChild(user)
+                document.querySelector(test2).appendChild(userBio)
+
+
+
+            }
+
+            var trackNumber3 = 0
+
+            //global chat
+
+            function globalChat(profilepic, name, bio){
+
+
+                var textbox = bio
+                console.log(textbox)
+                var globalBubble = document.createElement("p")
+                var username = document.createElement("h6")
+                var profile = document.createElement("img")
+                var div = document.createElement("div")
+                
+
+                
+                
+                username.innerHTML = name
+                username.classList.add("pfp-user-global")
+                username.classList.add("img-alignment")
+
+
+
+                profile.src = profilepic
+                profile.classList.add("chat-images")
+                profile.classList.add("pfp-user-global")
+
+                trackNumber3++
+
+                //create random class div
+                var test = "newDivBubbleGlobal"+ trackNumber2.toString()
+                //select last random class div
+                var test2 = "."+test
+
+
+                div.classList.add("col-xl-4")
+                div.style.marginLeft = "10%"
+                div.classList.add(test)
+
+                // console.log("Hello?")
+
+                
+                
+                globalBubble.innerHTML = textbox
+                
+                globalBubble.classList.add("chatbubble")
+                globalBubble.classList.add("global-bubble")
+                
+
+                // console.log(profile)
+                // console.log(username)
+                
+
+                // document.querySelector(".chat-viewport").append(profile, username, localBubble)
+
+                document.querySelector(".chat-viewport").appendChild(div)
+                document.querySelector(test2).appendChild(profile)
+                document.querySelector(test2).appendChild(username)
+                document.querySelector(test2).appendChild(globalBubble)
+
+
+                scrollToEnd(".chat-viewport")
+
+
+
+
+
+
+            }
+
+            
+
+
+            let scrollToEnd = ( elem ) => {
+                let el = document.querySelector(elem)
+                el.scrollTop = el.scrollHeight
+            }
+
+
+
+        </script>
+    </body>
+</html>
